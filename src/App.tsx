@@ -1,28 +1,47 @@
-import React from 'react';
+import { useRef } from "react";
+import Header from "./components/Header/Header";
 
 function App() {
+  const header = useRef<HTMLElement>(null);
+  const scrolltop = useRef<HTMLAnchorElement>(null);
+  // const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+  // const linksRef = useRef<HTMLAnchorElement[]>([]);
+
+  const scrollHandler = () => {
+    const scrollY = window.pageYOffset;
+
+    if (scrollY >= 200) {
+      header.current?.classList.add("scroll-header");
+    } else {
+      header.current?.classList.remove("scroll-header");
+    }
+
+    if (scrollY >= 560) {
+      scrolltop.current?.classList.add("show-scroll");
+    } else {
+      scrolltop.current?.classList.remove("show-scroll");
+    }
+
+    // sectionsRef.current.forEach((ref, index) => {
+    //   const sectionHeight = ref?.offsetHeight;
+    //   const sectionTop = ref?.offsetTop;
+
+    //     console.log(sectionHeight);
+    //   if (sectionTop && sectionHeight) {
+    //     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+    //       linksRef.current[index].classList.add("active-link");
+    //     } else {
+    //       linksRef.current[index].classList.remove("active-link");
+    //     }
+    //   }
+    // });
+  };
+
+  window.addEventListener("scroll", scrollHandler);
   return (
-    <body>
-        <header className="l-header" id="header">
-            <nav className="nav bd-container">
-                <a href="#" className="nav__logo">Rey Vega</a>
-
-                <div className="nav__menu" id="nav-menu">
-                    <ul className="nav__list">
-                        <li className="nav__item"><a href="#home" className="nav__link">Home</a></li>
-                        <li className="nav__item"><a href="#about" className="nav__link">About</a></li>
-                        <li className="nav__item"><a href="#services" className="nav__link">Services</a></li>
-                        <li className="nav__item"><a href="#portfolio" className="nav__link">Portfolio</a></li>
-                        <li className="nav__item"><a href="#contact" className="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div className="nav__toggle" id="nav-toggle">
-                    <i className='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-    </body>
+    <div>
+      <Header header={header} scrollTop={scrolltop} />
+    </div>
   );
 }
 
