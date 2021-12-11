@@ -3,50 +3,52 @@ import Header from "./components/Header/Header";
 import Home from "./components/Sections/Home";
 import About from "./components/Sections/About";
 
+// const sections = document.querySelectorAll('section[id]')
+
+// function scrollActive() {
+//     const scrollY = window.pageYOffset
+
+//     sections.forEach(current =>{
+//         const sectionHeight = current.offsetHeight
+//         const sectionTop = current.OffsetTop - 50
+
+//         const sectionId = current.getAttribute('id')
+
+//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//             document.querySelector('nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+//         } else {
+//             document.querySelector('nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+//         }
+//     });
+// }
+// window.addEventListener('scroll', scrollActive)
+
 function App() {
-  const header = useRef<HTMLElement>(null);
-  const scrolltop = useRef<HTMLAnchorElement>(null);
-  // const sectionsRef = useRef<(HTMLElement | null)[]>([]);
-  // const linksRef = useRef<HTMLAnchorElement[]>([]);
+   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+
 
   const scrollHandler = () => {
-    const scrollY = window.pageYOffset;
+     sectionsRef.current.forEach((ref, index) => {
+      const sectionHeight = ref?.offsetHeight;
+      const sectionTop = ref?.offsetTop;
 
-    if (scrollY >= 200) {
-      header.current?.classList.add("scroll-header");
-    } else {
-      header.current?.classList.remove("scroll-header");
-    }
-
-    if (scrollY >= 560) {
-      scrolltop.current?.classList.add("show-scroll");
-    } else {
-      scrolltop.current?.classList.remove("show-scroll");
-    }
-
-    // sectionsRef.current.forEach((ref, index) => {
-    //   const sectionHeight = ref?.offsetHeight;
-    //   const sectionTop = ref?.offsetTop;
-
-    //     console.log(sectionHeight);
-    //   if (sectionTop && sectionHeight) {
-    //     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-    //       linksRef.current[index].classList.add("active-link");
-    //     } else {
-    //       linksRef.current[index].classList.remove("active-link");
-    //     }
-    //   }
-    // });
+      // if (sectionTop && sectionHeight) {
+      //   if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      //     linksRef.current[index].classList.add("active-link");
+      //   } else {
+      //     linksRef.current[index].classList.remove("active-link");
+      //   }
+      // }
+    });
   };
 
-  window.addEventListener("scroll", scrollHandler);
   return (
     <div>
-      <Header header={header} scrollTop={scrolltop} />
+      <Header />
 
       <main className="l-main">
-        <Home />
-        <About />
+        <Home ref={sectionsRef}/>
+        <About ref={sectionsRef}/>
       </main>
     </div>
   );

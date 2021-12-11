@@ -1,34 +1,9 @@
-import { RefObject, useRef } from "react";
+import { useRef } from "react";
 
-// const sections = document.querySelectorAll('section[id]')
-
-// function scrollActive() {
-//     const scrollY = window.pageYOffset
-
-//     sections.forEach(current =>{
-//         const sectionHeight = current.offsetHeight
-//         const sectionTop = current.OffsetTop - 50
-
-//         const sectionId = current.getAttribute('id')
-
-//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//             document.querySelector('nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-//         } else {
-//             document.querySelector('nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-//         }
-//     });
-// }
-// window.addEventListener('scroll', scrollActive)
-
-
-
-interface IHeader {
-  header: RefObject<HTMLElement>;
-  scrollTop: RefObject<HTMLAnchorElement>;
-}
-
-function Header(props: IHeader) {
+function Header() {
   const nav = useRef<HTMLDivElement>(null);
+  const header = useRef<HTMLHeadingElement>(null);
+  const scrollTop = useRef<HTMLAnchorElement>(null);
 
   const showMenu = () => {
     nav.current?.classList.toggle("show-menu");
@@ -38,25 +13,38 @@ function Header(props: IHeader) {
     nav.current?.classList.remove("show-menu");
   };
 
+  const scrollHeaderHandler = () => {
+    const scrollY = window.pageYOffset;
+
+    if (scrollY >= 200) {
+      header.current?.classList.add("scroll-header");
+    } else {
+      header.current?.classList.remove("scroll-header");
+    }
+
+    if (scrollY >= 560) {
+      scrollTop.current?.classList.add("show-scroll");
+    } else {
+      scrollTop.current?.classList.remove("show-scroll");
+    }
+  };
+  window.addEventListener("scroll", scrollHeaderHandler);
+
   return (
     <div>
-      <a ref={props.scrollTop} href="#r" className="scrolltop">
+      <a ref={scrollTop} href="#" className="scrolltop">
         <i className="bx bxs-chevron-up scrolltop__icon" />
       </a>
-      <header ref={props.header} className="l-header">
+      <header ref={header} className="l-header">
         <nav className="nav bd-container">
-          <a href="#rey" className="nav__logo">
+          <a href="#" className="nav__logo">
             Rey Vega
           </a>
 
           <div ref={nav} className="nav__menu">
             <ul className="nav__list">
               <li className="nav__item">
-                <a
-                  href="#home"
-                  className="nav__link"
-                  onClick={hideMenu}
-                >
+                <a href="#" className="nav__link" onClick={hideMenu}>
                   Home
                 </a>
               </li>
