@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
+import Home from "./components/Sections/Home";
+import About from "./components/Sections/About";
 
 function App() {
   const header = useRef<HTMLElement>(null);
@@ -45,6 +46,7 @@ function App() {
 
       <main className="l-main">
         <Home />
+        <About />
       </main>
     </div>
   );
