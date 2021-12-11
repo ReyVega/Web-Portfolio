@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { RefObject, createRef } from "react";
 import Header from "./components/Header/Header";
 import Home from "./components/Sections/Home";
 import About from "./components/Sections/About";
@@ -24,31 +24,40 @@ import About from "./components/Sections/About";
 // window.addEventListener('scroll', scrollActive)
 
 function App() {
-   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+  const sectionRefs: RefObject<HTMLElement>[] = Array.from({ length: 4 }, () =>
+    createRef()
+  );
+  const linkRefs: RefObject<HTMLAnchorElement>[] = Array.from(
+    { length: 4 },
+    () => createRef()
+  );
 
+  const scrollActiveHandler = () => {
+    const scrollY = window.pageYOffset;
 
-  const scrollHandler = () => {
-     sectionsRef.current.forEach((ref, index) => {
-      const sectionHeight = ref?.offsetHeight;
-      const sectionTop = ref?.offsetTop;
+    sectionRefs.forEach((ref, index) => {
+      const sectionHeight = ref.current?.offsetHeight;
+      const sectionTop = (ref.current) ? ref.current?.offsetTop - 50 : 0;
 
-      // if (sectionTop && sectionHeight) {
-      //   if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      //     linksRef.current[index].classList.add("active-link");
-      //   } else {
-      //     linksRef.current[index].classList.remove("active-link");
-      //   }
-      // }
+      if (sectionTop && sectionHeight) {
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          linkRefs[index].current?.classList.add("active-link");
+        } else {
+          linkRefs[index].current?.classList.remove("active-link");
+        }
+      }
     });
   };
 
+  window.addEventListener("scroll", scrollActiveHandler);
+
   return (
     <div>
-      <Header />
+      <Header reference={linkRefs}/>
 
       <main className="l-main">
-        <Home ref={sectionsRef}/>
-        <About ref={sectionsRef}/>
+        <Home reference={sectionRefs[0]} />
+        <About reference={sectionRefs[1]} />
       </main>
     </div>
   );

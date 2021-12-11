@@ -3,13 +3,13 @@ import { RefObject } from "react";
 import profile from "../../assets/jojos.png";
 
 interface IHome {
-  ref: RefObject<(HTMLElement | null)[]>;
+  reference: RefObject<HTMLElement>;
 }
 
 function Home(props: IHome) {
   return (
     <div>
-      <section className="home" id="home">
+      <section ref={props.reference} className="home" id="home">
         <div className="home__container bd-container bd-grid">
           <div className="home__data">
             <span className="home__greeting">Hello, my name is</span>

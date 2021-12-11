@@ -3,13 +3,17 @@ import { RefObject } from "react";
 import profile from "../../assets/jojos.png";
 
 interface IAbout {
-  ref: RefObject<(HTMLElement | null)[]>;
+  reference: RefObject<HTMLElement>;
 }
 
 function About(props: IAbout) {
   return (
     <div>
-      <section className="about section bd-container" id="about">
+      <section
+        ref={props.reference}
+        className="about section bd-container"
+        id="about"
+      >
         <span className="section-subtitle">My history</span>
         <h2 className="section-title">About me</h2>
 
