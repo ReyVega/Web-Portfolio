@@ -57,6 +57,7 @@ function Header(props: IHeader) {
                   Home
                 </a>
               </li>
+
               <li className="nav__item">
                 <a
                   ref={props.reference[1]}
@@ -67,16 +68,18 @@ function Header(props: IHeader) {
                   About
                 </a>
               </li>
+
               <li className="nav__item">
                 <a
                   ref={props.reference[2]}
-                  href="#services"
+                  href="#qualification"
                   className="nav__link"
                   onClick={hideMenu}
                 >
-                  Services
+                  Qualification
                 </a>
               </li>
+
               <li className="nav__item">
                 <a
                   ref={props.reference[3]}
@@ -87,6 +90,7 @@ function Header(props: IHeader) {
                   Portfolio
                 </a>
               </li>
+
               <li className="nav__item">
                 <a
                   ref={props.reference[4]}

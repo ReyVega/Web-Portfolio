@@ -2,26 +2,8 @@ import { RefObject, createRef } from "react";
 import Header from "./components/Header/Header";
 import Home from "./components/Sections/Home";
 import About from "./components/Sections/About";
-
-// const sections = document.querySelectorAll('section[id]')
-
-// function scrollActive() {
-//     const scrollY = window.pageYOffset
-
-//     sections.forEach(current =>{
-//         const sectionHeight = current.offsetHeight
-//         const sectionTop = current.OffsetTop - 50
-
-//         const sectionId = current.getAttribute('id')
-
-//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//             document.querySelector('nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-//         } else {
-//             document.querySelector('nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-//         }
-//     });
-// }
-// window.addEventListener('scroll', scrollActive)
+import Qualification from "./components/Sections/Qualification";
+import Portfolio from "./components/Sections/Portfolio";
 
 function App() {
   const sectionRefs: RefObject<HTMLElement>[] = Array.from({ length: 4 }, () =>
@@ -37,7 +19,7 @@ function App() {
 
     sectionRefs.forEach((ref, index) => {
       const sectionHeight = ref.current?.offsetHeight;
-      const sectionTop = (ref.current) ? ref.current?.offsetTop - 50 : 0;
+      const sectionTop = ref.current ? ref.current?.offsetTop - 50 : 0;
 
       if (sectionTop && sectionHeight) {
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -53,11 +35,13 @@ function App() {
 
   return (
     <div>
-      <Header reference={linkRefs}/>
+      <Header reference={linkRefs} />
 
       <main className="l-main">
         <Home reference={sectionRefs[0]} />
         <About reference={sectionRefs[1]} />
+        <Qualification reference={sectionRefs[2]} />
+        <Portfolio reference={sectionRefs[3]}/>
       </main>
     </div>
   );
