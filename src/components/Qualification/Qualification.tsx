@@ -1,4 +1,5 @@
 import { RefObject } from "react";
+import QualificationItem from "./components/QualificationItem";
 
 interface IQualification {
   reference: RefObject<HTMLElement>;
@@ -21,40 +22,15 @@ function Qualification(props: IQualification) {
               <i className="bx bx-briefcase-alt qualification__title-icon" />
               Work Experience
             </h2>
+
             <div className="bd-grid">
-              <div className="qualification__data">
-                <h3 className="qualification__area">
-                  Senior Frontend Developer
-                </h3>
-
-                <div className="qualification__box">
-                  <span className="qualification__work">
-                    <i className="bx bx-briefcase-alt qualification__icon" />
-                    Adobe New York
-                  </span>
-
-                  <span className="qualification__work">
-                    <i className="bx bx-calendar-alt qualification__icon" />
-                    Jan 2019 - Aug 2019
-                  </span>
-                </div>
-              </div>
-
-              <div className="qualification__data">
-                <h3 className="qualification__area">UI/UX Design</h3>
-
-                <div className="qualification__box">
-                  <span className="qualification__work">
-                    <i className="bx bx-briefcase-alt qualification__icon" />
-                    Figma Lima
-                  </span>
-
-                  <span className="qualification__work">
-                    <i className="bx bx-calendar-alt qualification__icon" />
-                    Oct 2019 - Dec 2019
-                  </span>
-                </div>
-              </div>
+              <QualificationItem
+                title="Senior Frontend Developer"
+                subtitle="Adobe New York"
+                iconSubtitle="bx bx-briefcase-alt"
+                iconDate="bx bx-calendar-alt"
+                date="Jan 2019 - Aug 2019"
+              />
             </div>
           </div>
 
@@ -63,38 +39,23 @@ function Qualification(props: IQualification) {
               <i className="bx bx-book-bookmark qualification__title-icon" />
               Education
             </h2>
+
             <div className="bd-grid">
-              <div className="qualification__data">
-                <h3 className="qualification__area">Software Engineering</h3>
+              <QualificationItem
+                title="Software Engineering"
+                subtitle="Zapopan - Tecnológico de Monterrey"
+                iconSubtitle="bx bx-book-alt"
+                iconDate="bx bx-calendar-alt"
+                date="Aug 2018 - Aug 2022"
+              />
 
-                <div className="qualification__box">
-                  <span className="qualification__work">
-                    <i className="bx bx-book-alt qualification__icon" />
-                    Zapopan - Tecnológico de Monterrey
-                  </span>
-
-                  <span className="qualification__work">
-                    <i className="bx bx-calendar-alt qualification__icon" />
-                    Aug 2018 - Dec 2022
-                  </span>
-                </div>
-              </div>
-
-              <div className="qualification__data">
-                <h3 className="qualification__area">High School</h3>
-
-                <div className="qualification__box">
-                  <span className="qualification__work">
-                    <i className="bx bx-book-alt qualification__icon" />
-                    Sinaloa - Tecnológico de Monterrey
-                  </span>
-
-                  <span className="qualification__work">
-                    <i className="bx bx-calendar-alt qualification__icon" />
-                    Aug 2015 - June 2018
-                  </span>
-                </div>
-              </div>
+              <QualificationItem
+                title="High School"
+                subtitle="Sinaloa - Tecnológico de Monterrey"
+                iconSubtitle="bx bx-book-alt"
+                iconDate="bx bx-calendar-alt"
+                date="Aug 2015 - June 2018"
+              />
             </div>
           </div>
         </div>

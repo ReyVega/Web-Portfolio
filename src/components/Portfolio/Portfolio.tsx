@@ -1,6 +1,7 @@
 import { createRef, RefObject, useLayoutEffect, useRef } from "react";
 import PortfolioItem from "./components/PortfolioItem";
 import PortfolioNavItem from "./components/PortfolioNavItem";
+import Profile from "../../assets/jojos.png";
 
 interface IPortfolio {
   reference: RefObject<HTMLElement>;
@@ -77,35 +78,35 @@ function Portfolio(props: IPortfolio) {
         <div ref={portfolio_nav} className="portfolio__container bd-grid">
           <PortfolioItem
             filter="personal"
-            image={""}
+            image={String(Profile)}
             subtitle="Web Development"
             title="manos"
             href="/#"
           />
           <PortfolioItem
             filter="personal"
-            image={""}
+            image={String(Profile)}
             subtitle="Web Development"
             title="manos"
             href="/#"
           />
           <PortfolioItem
             filter="personal"
-            image={""}
+            image={String(Profile)}
             subtitle="Web Development"
             title="manos"
             href="/#"
           />
           <PortfolioItem
             filter="personal"
-            image={""}
+            image={String(Profile)}
             subtitle="Web Development"
             title="manos"
             href="/#"
           />
           <PortfolioItem
             filter="personal"
-            image={""}
+            image={String(Profile)}
             subtitle="Web Development"
             title="manos"
             href="/#"

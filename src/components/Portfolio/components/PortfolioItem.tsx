@@ -1,5 +1,3 @@
-import Profile from "../../../assets/jojos.png";
-
 interface IPortfolioItem {
   filter: string;
   image: string;
@@ -12,7 +10,7 @@ function PortfolioItem(props: IPortfolioItem) {
   return (
     <div className={"portfolio__content mix " + props.filter}>
       <a href={props.href}>
-        <img src={Profile} alt="" className="portfolio__img" />
+        <img src={props.image} alt="" className="portfolio__img" />
       </a>
       <div className="portfolio__data">
         <span className="portfolio__subtitle">{props.subtitle}</span>
