@@ -1,12 +1,41 @@
-import { RefObject } from "react";
-
+import { RefObject, useLayoutEffect } from "react";
 import profile from "../../assets/jojos.png";
+import { gsap } from "gsap";
 
 interface IHome {
   reference: RefObject<HTMLElement>;
 }
 
 function Home(props: IHome) {
+  const q = gsap.utils.selector(props.reference);
+
+  useLayoutEffect(() => {
+    gsap.from(q(".home__img"), { opacity: 0, duration: 2, delay: 0.5, x: 60 });
+    gsap.from(q(".home__data"), { opacity: 0, duration: 2, delay: 0.8, y: 25 });
+    gsap.from(
+      q(".home__greeting, .home__name, .home__profession, .home__button"),
+      {
+        opacity: 0,
+        duration: 2,
+        delay: 1,
+        y: 25,
+        ease: "expo.out",
+        stagger: 0.2,
+      }
+    );
+    gsap.from(
+      q(".home__social-icon"),
+      {
+        opacity: 0,
+        duration: 2,
+        delay: 2.3,
+        y: 25,
+        ease: "expo.out",
+        stagger: 0.2,
+      }
+    );
+  }, []);
+
   return (
     <div>
       <section ref={props.reference} className="home" id="home">

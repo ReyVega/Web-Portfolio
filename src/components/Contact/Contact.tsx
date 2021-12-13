@@ -74,8 +74,8 @@ function Contact(props: IContact) {
                 className="contact__input"
               />
               <input
-                type="number"
-                placeholder="Number"
+                type="tel"
+                placeholder="Phone"
                 className="contact__input"
               />
             </div>

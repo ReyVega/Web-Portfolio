@@ -1,4 +1,5 @@
-import { useRef, RefObject } from "react";
+import { useRef, RefObject, useLayoutEffect } from "react";
+import { gsap } from "gsap";
 
 interface IHeader {
   reference: RefObject<HTMLAnchorElement>[];
@@ -8,6 +9,28 @@ function Header(props: IHeader) {
   const nav = useRef<HTMLDivElement>(null);
   const header = useRef<HTMLHeadingElement>(null);
   const scrollTop = useRef<HTMLAnchorElement>(null);
+
+  const q = gsap.utils.selector(header);
+
+  useLayoutEffect(() => {
+    gsap.from(q(".nav__logo, nav__toggle"), {
+      opacity: 0,
+      duration: 2,
+      delay: 1.5,
+      y: 25,
+      ease: "expo.out",
+      stagger: 0.2,
+    });
+
+    gsap.from(q(".nav__item"), {
+      opacity: 0,
+      duration: 2,
+      delay: 1.8,
+      y: 25,
+      ease: "expo.out",
+      stagger: 0.2,
+    });
+  }, []);
 
   const showMenu = () => {
     nav.current?.classList.toggle("show-menu");
