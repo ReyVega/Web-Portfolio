@@ -5,6 +5,7 @@ import About from "./components/Sections/About";
 import Qualification from "./components/Sections/Qualification";
 import Portfolio from "./components/Sections/Portfolio";
 import Contact from "./components/Sections/Contact";
+import Footer from "./components/Sections/Footer";
 
 function App() {
   const numberOfSections = 5;
@@ -47,6 +48,7 @@ function App() {
         <Qualification reference={sectionRefs[2]} />
         <Portfolio reference={sectionRefs[3]} />
         <Contact reference={sectionRefs[4]} />
+        <Footer />
       </main>
     </div>
   );
