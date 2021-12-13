@@ -10,9 +10,9 @@ function Header(props: IHeader) {
   const header = useRef<HTMLHeadingElement>(null);
   const scrollTop = useRef<HTMLAnchorElement>(null);
 
-  const q = gsap.utils.selector(header);
-
   useLayoutEffect(() => {
+    const q = gsap.utils.selector(header);
+
     gsap.from(q(".nav__logo, nav__toggle"), {
       opacity: 0,
       duration: 2,
