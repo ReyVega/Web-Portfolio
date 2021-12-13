@@ -4,13 +4,17 @@ import Home from "./components/Sections/Home";
 import About from "./components/Sections/About";
 import Qualification from "./components/Sections/Qualification";
 import Portfolio from "./components/Sections/Portfolio";
+import Contact from "./components/Sections/Contact";
 
 function App() {
-  const sectionRefs: RefObject<HTMLElement>[] = Array.from({ length: 4 }, () =>
-    createRef()
+  const numberOfSections = 5;
+
+  const sectionRefs: RefObject<HTMLElement>[] = Array.from(
+    { length: numberOfSections },
+    () => createRef()
   );
   const linkRefs: RefObject<HTMLAnchorElement>[] = Array.from(
-    { length: 4 },
+    { length: numberOfSections },
     () => createRef()
   );
 
@@ -41,7 +45,8 @@ function App() {
         <Home reference={sectionRefs[0]} />
         <About reference={sectionRefs[1]} />
         <Qualification reference={sectionRefs[2]} />
-        <Portfolio reference={sectionRefs[3]}/>
+        <Portfolio reference={sectionRefs[3]} />
+        <Contact reference={sectionRefs[4]} />
       </main>
     </div>
   );
