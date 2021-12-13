@@ -181,6 +181,11 @@ img {
     color: var(--first-color-lighten);
 }
 
+.nav__logo:hover {
+    color: var(--first-color-light);
+    transition: .3s;
+}
+
 .nav__toggle {
     font-size: 1.3rem;
     cursor: pointer;
@@ -314,6 +319,7 @@ img {
     font-size: 1.3rem;
     margin-bottom: var(--mb-2);
     color: var(--first-color-lighten);
+    transition: .3s;
 }
 
 .home__social-icon:hover {
@@ -404,6 +410,7 @@ img {
 .qualification__icon, .qualification__work {
     font-size: var(--smaller-font-size);
     color: var(--first-color-light);
+    margin-right: 5px;
 }
 
 .qualification__work {
@@ -491,10 +498,19 @@ img {
     margin: var(--mb-1) 0;
 }
 
+.contact__description {
+    color: var(--first-color-light);
+}
+
 .contact__social {
     color: var(--first-color-light);
     font-size: 1.25rem;
     margin: 0 var(--mb-1);
+    transition: .3s;
+}
+
+.contact__social:hover {
+    color: var(--first-color);
 }
 
 .contact__box:hover {
@@ -662,7 +678,7 @@ img {
 
     .qualification__box {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .portfolio__container {

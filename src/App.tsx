@@ -1,11 +1,11 @@
 import { RefObject, createRef } from "react";
 import Header from "./components/Header/Header";
-import Home from "./components/Sections/Home";
-import About from "./components/Sections/About";
-import Qualification from "./components/Sections/Qualification";
-import Portfolio from "./components/Sections/Portfolio";
-import Contact from "./components/Sections/Contact";
-import Footer from "./components/Sections/Footer";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Qualification from "./components/Qualification/Qualification";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const numberOfSections = 5;
