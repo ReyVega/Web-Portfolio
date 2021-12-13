@@ -41,15 +41,12 @@ function App() {
   return (
     <div>
       <Header reference={linkRefs} />
-
-      <main className="l-main">
-        <Home reference={sectionRefs[0]} />
-        <About reference={sectionRefs[1]} />
-        <Qualification reference={sectionRefs[2]} />
-        <Portfolio reference={sectionRefs[3]} />
-        <Contact reference={sectionRefs[4]} />
-        <Footer />
-      </main>
+      <Home reference={sectionRefs[0]} />
+      <About reference={sectionRefs[1]} />
+      <Qualification reference={sectionRefs[2]} />
+      <Portfolio reference={sectionRefs[3]} />
+      <Contact reference={sectionRefs[4]} />
+      <Footer />
     </div>
   );
 }

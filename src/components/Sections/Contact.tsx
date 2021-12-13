@@ -20,41 +20,37 @@ function Contact(props: IContact) {
             <div className="contact__box">
               <i className="bx bx-home contact__icon"></i>
               <h3 className="contact__title">Location</h3>
-              <span className="contact__description">#123 Lima -Peru</span>
+              <span className="contact__description">Zapopan - Jalisco</span>
             </div>
-          </div>
 
-          <div className="contact__content bd-grid">
             <div className="contact__box">
               <i className="bx bx-phone contact__icon"></i>
               <h3 className="contact__title">Phone</h3>
-              <span className="contact__description">999-888-777</span>
+              <span className="contact__description">667-151-5706</span>
             </div>
-          </div>
 
-          <div className="contact__content bd-grid">
             <div className="contact__box">
               <i className="bx bx-envelope contact__icon"></i>
               <h3 className="contact__title">Gmail</h3>
               <span className="contact__description">
-                reynaldovega2010@gmail.com
+                reyvega@gmail.com
               </span>
             </div>
-          </div>
 
-          <div className="contact__content bd-grid">
             <div className="contact__box">
               <i className="bx bx-chat contact__icon"></i>
               <h3 className="contact__title">Chat</h3>
-              <a href="/#" className="contact__social">
-                <i className="bx bxl-whatsapp-square contact__icon"></i>
-              </a>
-              <a href="/#" className="contact__social">
-                <i className="bx bxl-telegram contact__icon"></i>
-              </a>
-              <a href="/#" className="contact__social">
-                <i className="bx bxl-messenger contact__icon"></i>
-              </a>
+              <div>
+                <a href="/#" className="contact__social">
+                  <i className="bx bxl-whatsapp-square contact__icon"></i>
+                </a>
+                <a href="/#" className="contact__social">
+                  <i className="bx bxl-telegram contact__icon"></i>
+                </a>
+                <a href="/#" className="contact__social">
+                  <i className="bx bxl-messenger contact__icon"></i>
+                </a>
+              </div>
             </div>
           </div>
 
