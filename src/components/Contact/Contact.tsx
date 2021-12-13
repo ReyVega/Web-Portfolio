@@ -42,13 +42,13 @@ function Contact(props: IContact) {
               <h3 className="contact__title">Chat</h3>
               <div>
                 <a href="/#" className="contact__social">
-                  <i className="bx bxl-whatsapp-square contact__icon"></i>
+                  <i className="bx bxl-whatsapp-square"></i>
                 </a>
                 <a href="/#" className="contact__social">
-                  <i className="bx bxl-telegram contact__icon"></i>
+                  <i className="bx bxl-telegram"></i>
                 </a>
                 <a href="/#" className="contact__social">
-                  <i className="bx bxl-messenger contact__icon"></i>
+                  <i className="bx bxl-messenger"></i>
                 </a>
               </div>
             </div>

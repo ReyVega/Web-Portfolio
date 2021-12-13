@@ -51,7 +51,7 @@ function Header(props: IHeader) {
                 <a
                   ref={props.reference[0]}
                   href="/#"
-                  className="nav__link"
+                  className="nav__link active-link"
                   onClick={hideMenu}
                 >
                   Home
