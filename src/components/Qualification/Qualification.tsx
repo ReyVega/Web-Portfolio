@@ -55,22 +55,6 @@ function Qualification(props: IQualification) {
                   </span>
                 </div>
               </div>
-
-              <div className="qualification__data">
-                <h3 className="qualification__area">Web Designer</h3>
-
-                <div className="qualification__box">
-                  <span className="qualification__work">
-                    <i className="bx bx-briefcase-alt qualification__icon" />
-                    Apple Inc - New York
-                  </span>
-
-                  <span className="qualification__work">
-                    <i className="bx bx-calendar-alt qualification__icon" />
-                    Jan 2020 - May 2020
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -81,33 +65,33 @@ function Qualification(props: IQualification) {
             </h2>
             <div className="bd-grid">
               <div className="qualification__data">
-                <h3 className="qualification__area">Computer technician</h3>
+                <h3 className="qualification__area">Software Engineering</h3>
 
                 <div className="qualification__box">
                   <span className="qualification__work">
                     <i className="bx bx-book-alt qualification__icon" />
-                    Lima - Computer insitute
+                    Zapopan - Tecnológico de Monterrey
                   </span>
 
                   <span className="qualification__work">
                     <i className="bx bx-calendar-alt qualification__icon" />
-                    Apr 2015 - Dec 2018
+                    Aug 2018 - Dec 2022
                   </span>
                 </div>
               </div>
 
               <div className="qualification__data">
-                <h3 className="qualification__area">Master in web developer</h3>
+                <h3 className="qualification__area">High School</h3>
 
                 <div className="qualification__box">
                   <span className="qualification__work">
                     <i className="bx bx-book-alt qualification__icon" />
-                    Madrid - Design institute
+                    Sinaloa - Tecnológico de Monterrey
                   </span>
 
                   <span className="qualification__work">
                     <i className="bx bx-calendar-alt qualification__icon" />
-                    Jan 2019 - Aug 2020
+                    Aug 2015 - June 2018
                   </span>
                 </div>
               </div>

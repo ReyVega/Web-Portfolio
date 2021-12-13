@@ -1,5 +1,6 @@
 import { useRef, RefObject, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import NavItem from "./components/NavItem";
 
 interface IHeader {
   reference: RefObject<HTMLAnchorElement>[];
@@ -70,60 +71,41 @@ function Header(props: IHeader) {
 
           <div ref={nav} className="nav__menu">
             <ul className="nav__list">
-              <li className="nav__item">
-                <a
-                  ref={props.reference[0]}
-                  href="/#"
-                  className="nav__link active-link"
-                  onClick={hideMenu}
-                >
-                  Home
-                </a>
-              </li>
+              <NavItem
+                reference={props.reference[0]}
+                href="/#"
+                title="Home"
+                hideMenu={hideMenu}
+                isActive={true}
+              />
 
-              <li className="nav__item">
-                <a
-                  ref={props.reference[1]}
-                  href="#about"
-                  className="nav__link"
-                  onClick={hideMenu}
-                >
-                  About
-                </a>
-              </li>
+              <NavItem
+                reference={props.reference[1]}
+                href="#about"
+                title="About"
+                hideMenu={hideMenu}
+              />
 
-              <li className="nav__item">
-                <a
-                  ref={props.reference[2]}
-                  href="#qualification"
-                  className="nav__link"
-                  onClick={hideMenu}
-                >
-                  Qualification
-                </a>
-              </li>
+              <NavItem
+                reference={props.reference[2]}
+                href="#qualification"
+                title="Qualification"
+                hideMenu={hideMenu}
+              />
 
-              <li className="nav__item">
-                <a
-                  ref={props.reference[3]}
-                  href="#portfolio"
-                  className="nav__link"
-                  onClick={hideMenu}
-                >
-                  Portfolio
-                </a>
-              </li>
+              <NavItem
+                reference={props.reference[3]}
+                href="#portfolio"
+                title="Portfolio"
+                hideMenu={hideMenu}
+              />
 
-              <li className="nav__item">
-                <a
-                  ref={props.reference[4]}
-                  href="#contact"
-                  className="nav__link"
-                  onClick={hideMenu}
-                >
-                  Contact
-                </a>
-              </li>
+              <NavItem
+                reference={props.reference[4]}
+                href="#contact"
+                title="Contact"
+                hideMenu={hideMenu}
+              />
             </ul>
           </div>
 

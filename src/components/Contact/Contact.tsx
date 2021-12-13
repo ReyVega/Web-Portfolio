@@ -32,8 +32,8 @@ function Contact(props: IContact) {
             <div className="contact__box">
               <i className="bx bx-envelope contact__icon"></i>
               <h3 className="contact__title">Gmail</h3>
-              <span className="contact__description">
-                reyvega@gmail.com
+              <span className="contact__description contact__gmail">
+                reynaldovega2010@gmail.com
               </span>
             </div>
 
@@ -41,13 +41,19 @@ function Contact(props: IContact) {
               <i className="bx bx-chat contact__icon"></i>
               <h3 className="contact__title">Chat</h3>
               <div>
-                <a href="/#" className="contact__social">
+                <a
+                  href="https://wa.me/526671515706"
+                  className="contact__social"
+                >
                   <i className="bx bxl-whatsapp-square"></i>
                 </a>
-                <a href="/#" className="contact__social">
+                <a href="https://t.me/ReyV10" className="contact__social">
                   <i className="bx bxl-telegram"></i>
                 </a>
-                <a href="/#" className="contact__social">
+                <a
+                  href="http://m.me/reynaldo.vegamenchaca/"
+                  className="contact__social"
+                >
                   <i className="bx bxl-messenger"></i>
                 </a>
               </div>

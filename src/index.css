@@ -12,7 +12,7 @@
     --first-color: #252850;
     --first-color-dark: #1a1c38;
     --text-color: #0a0e47;
-    --first-color-light: #657b83;
+    --first-color-light: #B3B3B3;
     --first-color-lighten: #FBF9F9;
 
     /*===== Fonts and typography =====*/
@@ -96,6 +96,22 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/*===== Scrollbar =====*/
+::-webkit-scrollbar {
+  width: .60rem;
+  background-color: var(--first-color-lighten);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CCCCCC;
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ADADAD;
 }
 
 /*===== CLASS CSS =====*/
@@ -238,7 +254,7 @@ img {
     justify-content: center;
     align-items: center;
     padding: .5rem;
-    background: rgba(123, 111, 113, .7);
+    background: rgba(179, 179, 179, .7);
     border-radius: .5rem;
     z-index: var(--z-tooltip);
     transition: .4s;
@@ -426,6 +442,7 @@ img {
 .portfolio__item {
     margin: 0 var(--mb-2);
     cursor: pointer;
+    color: var(--first-color-light);
 }
 
 .portfolio__content {
@@ -500,6 +517,10 @@ img {
 
 .contact__description {
     color: var(--first-color-light);
+}
+
+.contact__gmail {
+    font-size: .78rem;
 }
 
 .contact__social {

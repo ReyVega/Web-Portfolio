@@ -49,13 +49,19 @@ function Home(props: IHome) {
           </div>
 
           <div className="home__social">
-            <a href="#f" className="home__social-icon">
+            <a
+              href="https://www.facebook.com/reynaldo.vegamenchaca/"
+              className="home__social-icon"
+            >
               <i className="bx bxl-facebook-square"></i>
             </a>
-            <a href="#f" className="home__social-icon">
+            <a href="https://github.com/ReyVega" className="home__social-icon">
               <i className="bx bxl-github"></i>
             </a>
-            <a href="#f" className="home__social-icon">
+            <a
+              href="https://www.linkedin.com/in/reynaldo-vega-menchaca-1343501b4/"
+              className="home__social-icon"
+            >
               <i className="bx bxl-linkedin-square"></i>
             </a>
           </div>

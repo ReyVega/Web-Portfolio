@@ -28,17 +28,17 @@ function About(props: IAbout) {
             </p>
 
             <div>
-              <span className="about__number">05</span>
+              <span className="about__number">04</span>
               <span className="about__achievement">Years off Experience</span>
             </div>
 
             <div>
-              <span className="about__number">29+</span>
+              <span className="about__number">14+</span>
               <span className="about__achievement">Projects completes</span>
             </div>
 
             <div>
-              <span className="about__number">07</span>
+              <span className="about__number">02</span>
               <span className="about__achievement">Best work awards</span>
             </div>
           </div>
