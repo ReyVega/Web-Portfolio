@@ -15,7 +15,7 @@ function NavItem(props: INavItem) {
         ref={props.reference}
         href={props.href}
         className={props.isActive ? "nav__link active-link" : "nav__link"}
-        onClick={() => props.hideMenu}
+        onClick={() => props.hideMenu()}
       >
         {props.title}
       </a>

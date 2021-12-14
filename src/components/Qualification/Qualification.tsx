@@ -25,11 +25,11 @@ function Qualification(props: IQualification) {
 
             <div className="bd-grid">
               <QualificationItem
-                title="Senior Frontend Developer"
-                subtitle="Adobe New York"
+                title="Software IT"
+                subtitle="Zapopan - Tecnológico de Monterrey"
                 iconSubtitle="bx bx-briefcase-alt"
                 iconDate="bx bx-calendar-alt"
-                date="Jan 2019 - Aug 2019"
+                date="Aug 2019 - Dec 2020"
               />
             </div>
           </div>

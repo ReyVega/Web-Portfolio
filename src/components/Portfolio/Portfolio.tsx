@@ -2,6 +2,14 @@ import { createRef, RefObject, useLayoutEffect, useRef } from "react";
 import PortfolioItem from "./components/PortfolioItem";
 import PortfolioNavItem from "./components/PortfolioNavItem";
 import Profile from "../../assets/jojos.png";
+import Arch from "../../assets/arch.png";
+import Invaders from "../../assets/invaders.png";
+import PortfolioImg from "../../assets/portfolio.png";
+import Competitive from "../../assets/competitive.png";
+import Rythm from "../../assets/rythm.png";
+import XVoid from "../../assets/xvoid.png";
+import Backend from "../../assets/backend.png";
+import Laika from "../../assets/laika.png";
 
 interface IPortfolio {
   reference: RefObject<HTMLElement>;
@@ -78,38 +86,66 @@ function Portfolio(props: IPortfolio) {
         <div ref={portfolio_nav} className="portfolio__container bd-grid">
           <PortfolioItem
             filter="personal"
-            image={String(Profile)}
+            image={String(Arch)}
+            subtitle="OS Development"
+            title="My Arch Linux"
+            href="https://github.com/ReyVega/dotfiles"
+          />
+          <PortfolioItem
+            filter="web"
+            image={String(PortfolioImg)}
             subtitle="Web Development"
-            title="manos"
-            href="/#"
+            title="My Web portfolio"
+            href="https://github.com/ReyVega/Web-Portfolio"
+          />
+          <PortfolioItem
+            filter="app"
+            image={String(Invaders)}
+            subtitle="Videogame Development"
+            title="Space Invaders GO"
+            href="https://github.com/ReyVega/Space-Invaders-GO"
           />
           <PortfolioItem
             filter="personal"
-            image={String(Profile)}
-            subtitle="Web Development"
-            title="manos"
-            href="/#"
+            image={String(Competitive)}
+            subtitle="Training problems"
+            title="Competitive Programming"
+            href="https://github.com/ReyVega/Competitive-Programming"
           />
           <PortfolioItem
-            filter="personal"
-            image={String(Profile)}
-            subtitle="Web Development"
-            title="manos"
-            href="/#"
+            filter="app"
+            image={String(XVoid)}
+            subtitle="Videogame Development"
+            title="X-VOID"
+            href="https://github.com/ReyVega/X-VOID"
           />
           <PortfolioItem
-            filter="personal"
-            image={String(Profile)}
-            subtitle="Web Development"
-            title="manos"
-            href="/#"
+            filter="app"
+            image={String(Rythm)}
+            subtitle="Mobile App Development"
+            title="Rythm"
+            href="https://github.com/ReyVega/Rythm"
           />
           <PortfolioItem
-            filter="personal"
-            image={String(Profile)}
+            filter="web"
+            image={String(Backend)}
             subtitle="Web Development"
-            title="manos"
-            href="/#"
+            title="Firebase Backend Testing"
+            href="https://github.com/ReyVega/Firebase-Backend-Testing"
+          />
+          <PortfolioItem
+            filter="web"
+            image={String(Laika)}
+            subtitle="Web Development"
+            title="Laika Web App"
+            href="https://github.com/FundacionLaika/Laika_WebPage"
+          />
+          <PortfolioItem
+            filter="app"
+            image={String(Profile)}
+            subtitle="Mobile App Development"
+            title="Organis App"
+            href="https://github.com/ReyVega/Organis-App"
           />
         </div>
       </section>
