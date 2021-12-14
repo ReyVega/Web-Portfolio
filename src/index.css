@@ -75,6 +75,7 @@ body {
   background-color: var(--first-color-lighten);
   color: var(--text-color);
   line-height: 1.6;
+  overflow: overlay;
 }
 
 h1,
@@ -107,13 +108,12 @@ img {
 
 /*===== Scrollbar =====*/
 ::-webkit-scrollbar {
-  width: 0.6rem;
-  background-color: var(--first-color-lighten);
-  border-radius: 0.5rem;
+  width: 0.4rem;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #cccccc;
+  background-color: rgba(179, 179, 179, 0.7);
   border-radius: 0.5rem;
 }
 
@@ -273,7 +273,7 @@ img {
 }
 
 .scrolltop:hover {
-  background-color: var(--first-color);
+  background-color: var(--first-color-dark);
 }
 
 .scrolltop__icon {
@@ -588,7 +588,7 @@ img {
 
 /*===== Footer =====*/
 .footer {
-  background-color: var(--first-color-dark);
+  background-color: var(--first-color);
   color: var(--first-color-lighten);
   text-align: center;
 }
