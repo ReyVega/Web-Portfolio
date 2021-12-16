@@ -1,6 +1,7 @@
 import { RefObject, useLayoutEffect, useRef } from "react";
 import profile from "../../assets/jojos.png";
 import { gsap } from "gsap";
+import CV from "../../assets/ReynaldoVega.pdf";
 
 interface IHome {
   reference: RefObject<HTMLElement>;
@@ -43,7 +44,11 @@ function Home(props: IHome) {
             <span className="home__greeting">Hello, my name is</span>
             <h1 className="home__name">Rey Vega</h1>
             <span className="home__profession">Software Engineer</span>
-            <a download="" href="#file" className="button button-light">
+            <a
+              download="Reynaldo Vega"
+              href={CV}
+              className="button button-light"
+            >
               Download CV
             </a>
           </div>

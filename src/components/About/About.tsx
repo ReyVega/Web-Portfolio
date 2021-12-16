@@ -24,7 +24,9 @@ function About(props: IAbout) {
                 Hello, I am <br />
               </span>
               Freelance Software engineer, I am passionate about creating and
-              solving digital world-wide problems.
+              solving complex computer systems and software issues. Looking to use
+              my programming skills to elevate the user experience through thougtful
+              and innovative work processes.
             </p>
 
             <div>

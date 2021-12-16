@@ -1,4 +1,5 @@
 import { RefObject } from "react";
+import ContactForm from "./components/ContactForm";
 
 interface IContact {
   reference: RefObject<HTMLElement>;
@@ -59,47 +60,7 @@ function Contact(props: IContact) {
               </div>
             </div>
           </div>
-
-          <form action="" className="contact__form">
-            <div className="contact__inputs">
-              <input
-                type="text"
-                placeholder="Name"
-                className="contact__input"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="contact__input"
-              />
-            </div>
-            <div className="contact__inputs">
-              <input
-                type="text"
-                placeholder="Subject"
-                className="contact__input"
-              />
-              <input
-                type="tel"
-                placeholder="Phone"
-                className="contact__input"
-              />
-            </div>
-
-            <textarea
-              name=""
-              id=""
-              cols={0}
-              rows={7}
-              placeholder="Message"
-              className="contact__input"
-            ></textarea>
-            <input
-              type="submit"
-              value="Send Message"
-              className="button contact__button"
-            />
-          </form>
+          <ContactForm />
         </div>
       </section>
     </div>
