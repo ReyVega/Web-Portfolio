@@ -700,7 +700,7 @@ img {
   }
 
   .home__img img {
-    width: 440px;
+    width: 390px;
   }
 
   .about__description {
@@ -729,5 +729,11 @@ img {
 
   .qualification__container {
     column-gap: 6rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .home__img img {
+    width: 440px;
   }
 }
