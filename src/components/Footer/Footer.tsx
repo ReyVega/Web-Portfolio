@@ -26,7 +26,7 @@ function Footer() {
             </a>
           </div>
           <p className="footer__copy">
-            &#169; 2021 Rey Vega. All rights reserved
+            &#169; 2022 Rey Vega. All rights reserved
           </p>
         </div>
       </footer>

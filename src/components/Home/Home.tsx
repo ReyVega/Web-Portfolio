@@ -1,5 +1,5 @@
 import { RefObject, useLayoutEffect, useRef } from "react";
-import profile from "../../assets/jojos.png";
+import Profile from "../../assets/profile.jpg";
 import { gsap } from "gsap";
 import CV from "../../assets/ReynaldoVega.pdf";
 
@@ -72,7 +72,7 @@ function Home(props: IHome) {
           </div>
 
           <div className="home__img">
-            <img src={profile} alt="" />
+            <img src={Profile} alt="" />
           </div>
         </div>
       </section>

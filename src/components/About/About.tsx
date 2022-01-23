@@ -1,6 +1,5 @@
 import { RefObject } from "react";
-
-import profile from "../../assets/jojos.png";
+import Profile from "../../assets/profile.jpg";
 
 interface IAbout {
   reference: RefObject<HTMLElement>;
@@ -23,7 +22,7 @@ function About(props: IAbout) {
               <span>
                 Hello, I am <br />
               </span>
-              Freelance Software engineer, I am passionate about creating and
+              Software engineer, I am passionate about creating and
               solving complex computer systems and software issues. Looking to use
               my programming skills to elevate the user experience through thougtful
               and innovative work processes.
@@ -45,7 +44,7 @@ function About(props: IAbout) {
             </div>
           </div>
 
-          <img src={profile} alt="" className="about__img" />
+          <img src={Profile} alt="" className="about__img" />
         </div>
       </section>
     </div>

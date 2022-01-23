@@ -1,7 +1,6 @@
 import { createRef, RefObject, useLayoutEffect, useRef } from "react";
 import PortfolioItem from "./components/PortfolioItem";
 import PortfolioNavItem from "./components/PortfolioNavItem";
-import Profile from "../../assets/jojos.png";
 import Arch from "../../assets/arch.png";
 import Invaders from "../../assets/invaders.png";
 import PortfolioImg from "../../assets/portfolio.png";
@@ -10,6 +9,7 @@ import Rythm from "../../assets/rythm.png";
 import XVoid from "../../assets/xvoid.png";
 import Backend from "../../assets/backend.png";
 import Laika from "../../assets/laika.png";
+import Minecraft from "../../assets/minecraft.png";
 
 interface IPortfolio {
   reference: RefObject<HTMLElement>;
@@ -141,11 +141,11 @@ function Portfolio(props: IPortfolio) {
             href="https://github.com/FundacionLaika/Laika_WebPage"
           />
           <PortfolioItem
-            filter="app"
-            image={String(Profile)}
-            subtitle="Mobile App Development"
-            title="Organis App"
-            href="https://github.com/ReyVega/Organis-App"
+            filter="web"
+            image={String(Minecraft)}
+            subtitle="Web development"
+            title="Minecraft World"
+            href="https://github.com/ReyVega/minecraft-world"
           />
         </div>
       </section>
