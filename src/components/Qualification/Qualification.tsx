@@ -29,7 +29,7 @@ function Qualification(props: IQualification) {
                 subtitle="Zapopan - Tecnológico de Monterrey"
                 iconSubtitle="bx bx-briefcase-alt"
                 iconDate="bx bx-calendar-alt"
-                date="Aug 2019 - Dec 2020"
+                date="Aug 2021 - Dec 2021"
               />
             </div>
           </div>
