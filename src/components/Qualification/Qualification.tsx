@@ -25,7 +25,7 @@ function Qualification(props: IQualification) {
 
             <div className="bd-grid">
               <QualificationItem
-                title="Software IT"
+                title="Software Engineer"
                 subtitle="Zapopan - Tecnológico de Monterrey"
                 iconSubtitle="bx bx-briefcase-alt"
                 iconDate="bx bx-calendar-alt"
