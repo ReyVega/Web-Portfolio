@@ -5,7 +5,7 @@ function Footer() {
         <div className="footer__container bd-container">
           <h1 className="footer__title">Rey Vega</h1>
           <p className="footer__description">
-            I'm Rey Vega and this is my personal website
+            Software Engineer
           </p>
 
           <div className="footer__social">
