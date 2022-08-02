@@ -20,7 +20,7 @@ function About(props: IAbout) {
           <div className="about__data bd-grid">
             <p className="about__description">
               <span>
-                Hello, I am <br />
+                Hello, I am a . . . <br />
               </span>
               Software engineer, I am passionate about creating and
               solving complex computer systems and software issues. Looking to use
