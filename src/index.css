@@ -346,7 +346,7 @@ textarea {
   flex-direction: column;
 }
 
-.home__social-icon {
+.home__social__icon {
   width: max-content;
   font-size: 1.3rem;
   margin-bottom: var(--mb-2);
@@ -354,7 +354,7 @@ textarea {
   transition: 0.3s;
 }
 
-.home__social-icon:hover {
+.home__social__icon:hover {
   color: var(--first-color-light);
 }
 
@@ -698,7 +698,7 @@ textarea {
     align-items: center;
   }
 
-  .home__social-icon {
+  .home__social__icon {
     margin-right: var(--mb-4);
     margin-bottom: 0;
   }

@@ -35,7 +35,7 @@ function Home(props: IHome) {
           stagger: 0.2,
         }
       );
-      gsap.from([".home__social-icon"], {
+      gsap.from([".animated__icon"], {
         opacity: 0,
         duration: 2,
         delay: 2.3,
@@ -68,18 +68,18 @@ function Home(props: IHome) {
           <div className="home__social">
             <a
               href="https://www.facebook.com/reynaldo.vegamenchaca/"
-              className="home__social-icon"
+              className="home__social__icon"
             >
-              <i className="bx bxl-facebook-square"></i>
+              <i className="bx bxl-facebook-square animated__icon"></i>
             </a>
-            <a href="https://github.com/ReyVega" className="home__social-icon">
-              <i className="bx bxl-github"></i>
+            <a href="https://github.com/ReyVega" className="home__social__icon">
+              <i className="bx bxl-github animated__icon"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/rey-vega-1343501b4/"
-              className="home__social-icon"
+              className="home__social__icon"
             >
-              <i className="bx bxl-linkedin-square"></i>
+              <i className="bx bxl-linkedin-square animated__icon"></i>
             </a>
           </div>
 
