@@ -12,25 +12,27 @@ function Header(props: IHeader) {
   const scrollTop = useRef<HTMLAnchorElement>(null);
 
   useLayoutEffect(() => {
-    const q = gsap.utils.selector(header);
+    let ctx = gsap.context(() => {
+      gsap.from([".nav__logo", "nav__toggle"], {
+        opacity: 0,
+        duration: 2,
+        delay: 1.5,
+        y: 25,
+        ease: "expo.out",
+        stagger: 0.2,
+      });
 
-    gsap.from(q(".nav__logo, nav__toggle"), {
-      opacity: 0,
-      duration: 2,
-      delay: 1.5,
-      y: 25,
-      ease: "expo.out",
-      stagger: 0.2,
-    });
+      gsap.from([".nav__item"], {
+        opacity: 0,
+        duration: 2,
+        delay: 1.8,
+        y: 25,
+        ease: "expo.out",
+        stagger: 0.2,
+      });
+    }, header);
 
-    gsap.from(q(".nav__item"), {
-      opacity: 0,
-      duration: 2,
-      delay: 1.8,
-      y: 25,
-      ease: "expo.out",
-      stagger: 0.2,
-    });
+    return () => ctx.revert();
   }, []);
 
   const showMenu = () => {

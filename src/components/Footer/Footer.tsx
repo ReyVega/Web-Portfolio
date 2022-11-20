@@ -4,9 +4,7 @@ function Footer() {
       <footer className="footer">
         <div className="footer__container bd-container">
           <h1 className="footer__title">Rey Vega</h1>
-          <p className="footer__description">
-            Software Engineer
-          </p>
+          <p className="footer__description">Software Engineer</p>
 
           <div className="footer__social">
             <a
@@ -19,7 +17,7 @@ function Footer() {
               <i className="bx bxl-github" />
             </a>
             <a
-              href="https://www.linkedin.com/in/reynaldo-vega-menchaca-1343501b4/"
+              href="https://www.linkedin.com/in/rey-vega-1343501b4/"
               className="footer__link"
             >
               <i className="bx bxl-linkedin" />

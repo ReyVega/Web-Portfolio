@@ -1,4 +1,5 @@
 import { RefObject } from "react";
+import { experienceItems, educationItems } from "./data/data";
 import QualificationItem from "./components/QualificationItem";
 
 interface IQualification {
@@ -24,20 +25,19 @@ function Qualification(props: IQualification) {
             </h2>
 
             <div className="bd-grid">
-              <QualificationItem
-                title="ITESM - Software Engineer"
-                subtitle="ITESM - Jalisco"
-                iconSubtitle="bx bx-briefcase-alt"
-                iconDate="bx bx-calendar-alt"
-                date="Aug 2021 - Dec 2021"
-              />
-              <QualificationItem
-                title="Toshiba Intern - Software Test Engineer"
-                subtitle="Toshiba GCS - Jalisco"
-                iconSubtitle="bx bx-briefcase-alt"
-                iconDate="bx bx-calendar-alt"
-                date="Aug 2022 - Dec 2022"
-              />
+              {experienceItems &&
+                experienceItems.map((item, index) => {
+                  return (
+                    <QualificationItem
+                      key={index}
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      iconSubtitle={item.iconSubtitle}
+                      iconDate={item.iconDate}
+                      date={item.date}
+                    />
+                  );
+                })}
             </div>
           </div>
 
@@ -48,21 +48,19 @@ function Qualification(props: IQualification) {
             </h2>
 
             <div className="bd-grid">
-              <QualificationItem
-                title="Software Engineering - BSE"
-                subtitle="ITESM - Jalisco"
-                iconSubtitle="bx bx-book-alt"
-                iconDate="bx bx-calendar-alt"
-                date="Aug 2018 - Aug 2022"
-              />
-
-              <QualificationItem
-                title="High School - HSD"
-                subtitle="ITESM - Sinaloa"
-                iconSubtitle="bx bx-book-alt"
-                iconDate="bx bx-calendar-alt"
-                date="Aug 2015 - June 2018"
-              />
+              {educationItems &&
+                educationItems.map((item, index) => {
+                  return (
+                    <QualificationItem
+                      key={index}
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      iconSubtitle={item.iconSubtitle}
+                      iconDate={item.iconDate}
+                      date={item.date}
+                    />
+                  );
+                })}
             </div>
           </div>
         </div>

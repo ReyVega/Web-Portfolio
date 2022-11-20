@@ -1,38 +1,22 @@
-import { createRef, RefObject, useLayoutEffect, useRef } from "react";
+import { createRef, RefObject, useLayoutEffect, useState } from "react";
+import { buttons, getTable, filterTable, ITable } from "./data/data";
 import PortfolioItem from "./components/PortfolioItem";
 import PortfolioNavItem from "./components/PortfolioNavItem";
-import Arch from "../../assets/arch.png";
-import Invaders from "../../assets/invaders.png";
-import PortfolioImg from "../../assets/portfolio.png";
-import Competitive from "../../assets/competitive.png";
-import Rythm from "../../assets/rythm.png";
-import XVoid from "../../assets/xvoid.png";
-import Backend from "../../assets/backend.png";
-import Laika from "../../assets/laika.png";
-import Minecraft from "../../assets/minecraft.png";
+import { AnimatePresence } from "framer-motion";
 
 interface IPortfolio {
   reference: RefObject<HTMLElement>;
 }
 
-var mixitup = require("mixitup");
-
 function Portfolio(props: IPortfolio) {
-  const portfolio_nav = useRef<HTMLDivElement>(null);
   const portfolioNavRefs: RefObject<HTMLSpanElement>[] = Array.from(
     { length: 4 },
     () => createRef()
   );
+  const [items, setItems] = useState<ITable[]>([]);
 
   useLayoutEffect(() => {
-    mixitup(portfolio_nav.current, {
-      selectors: {
-        target: ".portfolio__content",
-      },
-      animation: {
-        duration: 400,
-      },
-    });
+    setItems(getTable());
   }, []);
 
   const activePortfolio = (item: RefObject<HTMLSpanElement>) => {
@@ -40,6 +24,12 @@ function Portfolio(props: IPortfolio) {
       ref.current?.classList.remove("active-portfolio");
     });
     item.current?.classList.add("active-portfolio");
+  };
+
+  const filterBy = (event: React.MouseEvent<HTMLSpanElement>) => {
+    let filter = event.currentTarget.getAttribute("data-filter");
+
+    filter === "all" ? setItems(getTable()) : setItems(filterTable(filter));
   };
 
   return (
@@ -53,100 +43,46 @@ function Portfolio(props: IPortfolio) {
         <h2 className="section-title">Portfolio</h2>
 
         <div className="portfolio__nav">
-          <PortfolioNavItem
-            reference={portfolioNavRefs[0]}
-            data_filter="all"
-            title="All"
-            activePortfolio={activePortfolio}
-            isActive={true}
-          />
-
-          <PortfolioNavItem
-            reference={portfolioNavRefs[1]}
-            data_filter=".web"
-            title="Web"
-            activePortfolio={activePortfolio}
-          />
-
-          <PortfolioNavItem
-            reference={portfolioNavRefs[2]}
-            data_filter=".app"
-            title="App"
-            activePortfolio={activePortfolio}
-          />
-
-          <PortfolioNavItem
-            reference={portfolioNavRefs[3]}
-            data_filter=".personal"
-            title="Personal"
-            activePortfolio={activePortfolio}
-          />
+          {buttons &&
+            buttons.map((button, index) => {
+              return index === 0 ? (
+                <PortfolioNavItem
+                  key={index}
+                  reference={portfolioNavRefs[index]}
+                  filter={button.filter}
+                  title={button.title}
+                  activePortfolio={activePortfolio}
+                  filterBy={filterBy}
+                  isActive={true}
+                />
+              ) : (
+                <PortfolioNavItem
+                  key={index}
+                  reference={portfolioNavRefs[index]}
+                  filter={button.filter}
+                  title={button.title}
+                  filterBy={filterBy}
+                  activePortfolio={activePortfolio}
+                />
+              );
+            })}
         </div>
 
-        <div ref={portfolio_nav} className="portfolio__container bd-grid">
-          <PortfolioItem
-            filter="personal"
-            image={String(Arch)}
-            subtitle="OS Development"
-            title="My Arch Linux"
-            href="https://github.com/ReyVega/dotfiles"
-          />
-          <PortfolioItem
-            filter="web"
-            image={String(PortfolioImg)}
-            subtitle="Web Development"
-            title="My Web portfolio"
-            href="https://github.com/ReyVega/Web-Portfolio"
-          />
-          <PortfolioItem
-            filter="app"
-            image={String(Invaders)}
-            subtitle="Videogame Development"
-            title="Space Invaders GO"
-            href="https://github.com/ReyVega/Space-Invaders-GO"
-          />
-          <PortfolioItem
-            filter="personal"
-            image={String(Competitive)}
-            subtitle="Training problems"
-            title="Competitive Programming"
-            href="https://github.com/ReyVega/Competitive-Programming"
-          />
-          <PortfolioItem
-            filter="app"
-            image={String(XVoid)}
-            subtitle="Videogame Development"
-            title="X-VOID"
-            href="https://github.com/ReyVega/X-VOID"
-          />
-          <PortfolioItem
-            filter="app"
-            image={String(Rythm)}
-            subtitle="Mobile App Development"
-            title="Rythm"
-            href="https://github.com/ReyVega/Rythm"
-          />
-          <PortfolioItem
-            filter="web"
-            image={String(Backend)}
-            subtitle="Web Development"
-            title="Firebase Backend Testing"
-            href="https://github.com/ReyVega/Firebase-Backend-Testing"
-          />
-          <PortfolioItem
-            filter="web"
-            image={String(Laika)}
-            subtitle="Web Development"
-            title="Laika Web App"
-            href="https://github.com/FundacionLaika/Laika_WebPage"
-          />
-          <PortfolioItem
-            filter="web"
-            image={String(Minecraft)}
-            subtitle="Web development"
-            title="Minecraft World"
-            href="https://github.com/ReyVega/minecraft-world"
-          />
+        <div className="portfolio__container bd-grid">
+          <AnimatePresence>
+            {items &&
+              items.map((item, index) => {
+                return (
+                  <PortfolioItem
+                    key={index}
+                    image={item.image}
+                    subtitle={item.subtitle}
+                    title={item.title}
+                    href={item.href}
+                  />
+                );
+              })}
+          </AnimatePresence>
         </div>
       </section>
     </div>

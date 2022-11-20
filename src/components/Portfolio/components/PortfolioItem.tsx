@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
+
 interface IPortfolioItem {
-  filter: string;
   image: string;
   subtitle: string;
   title: string;
@@ -8,7 +9,14 @@ interface IPortfolioItem {
 
 function PortfolioItem(props: IPortfolioItem) {
   return (
-    <div className={"portfolio__content mix " + props.filter}>
+    <motion.div
+      className={"portfolio__content"}
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <a href={props.href}>
         <img src={props.image} alt="" className="portfolio__img" />
       </a>
@@ -21,7 +29,7 @@ function PortfolioItem(props: IPortfolioItem) {
           View details
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

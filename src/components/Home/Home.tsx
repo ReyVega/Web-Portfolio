@@ -1,7 +1,7 @@
 import { RefObject, useLayoutEffect, useRef } from "react";
 import Profile from "../../assets/profile.jpg";
 import { gsap } from "gsap";
-import CV from "../../assets/ReynaldoVega.pdf";
+import CV from "../../assets/Reynaldo_Vega.pdf";
 
 interface IHome {
   reference: RefObject<HTMLElement>;
@@ -11,29 +11,41 @@ function Home(props: IHome) {
   const homeRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    const q = gsap.utils.selector(homeRef);
-
-    gsap.from(q(".home__img"), { opacity: 0, duration: 2, delay: 0.5, x: 60 });
-    gsap.from(q(".home__data"), { opacity: 0, duration: 2, delay: 0.8, y: 25 });
-    gsap.from(
-      q(".home__greeting, .home__name, .home__profession, .home__button"),
-      {
+    let ctx = gsap.context(() => {
+      gsap.from([".home__img"], { opacity: 0, duration: 2, delay: 0.5, x: 60 });
+      gsap.from([".home__data"], {
         opacity: 0,
         duration: 2,
-        delay: 1,
+        delay: 0.8,
+        y: 25,
+      });
+      gsap.from(
+        [
+          ".home__greeting",
+          ".home__name",
+          ".home__profession",
+          ".home__button",
+        ],
+        {
+          opacity: 0,
+          duration: 2,
+          delay: 1,
+          y: 25,
+          ease: "expo.out",
+          stagger: 0.2,
+        }
+      );
+      gsap.from([".home__social-icon"], {
+        opacity: 0,
+        duration: 2,
+        delay: 2.3,
         y: 25,
         ease: "expo.out",
         stagger: 0.2,
-      }
-    );
-    gsap.from(q(".home__social-icon"), {
-      opacity: 0,
-      duration: 2,
-      delay: 2.3,
-      y: 25,
-      ease: "expo.out",
-      stagger: 0.2,
-    });
+      });
+    }, homeRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -64,7 +76,7 @@ function Home(props: IHome) {
               <i className="bx bxl-github"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/reynaldo-vega-menchaca-1343501b4/"
+              href="https://www.linkedin.com/in/rey-vega-1343501b4/"
               className="home__social-icon"
             >
               <i className="bx bxl-linkedin-square"></i>
