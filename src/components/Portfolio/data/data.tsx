@@ -1,3 +1,12 @@
+import Arch from "../../../assets/arch.png";
+import PortfolioImg from "../../../assets/portfolio.png";
+import Invaders from "../../../assets/invaders.png";
+import Competitive from "../../../assets/competitive.png";
+import XVoid from "../../../assets/xvoid.png";
+import Rythm from "../../../assets/rythm.png";
+import Backend from "../../../assets/backend.png";
+import Laika from "../../../assets/laika.png";
+import Minecraft from "../../../assets/minecraft.png";
 export interface ITable {
   filter: string;
   image: string;
@@ -14,63 +23,63 @@ export interface IButton {
 export const table: ITable[] = [
   {
     filter: "personal",
-    image: "./src/assets/arch.png",
+    image: String(Arch),
     subtitle: "OS Development",
     title: "My Arch Linux",
     href: "https://github.com/ReyVega/dotfiles",
   },
   {
     filter: "web",
-    image: "./src/assets/portfolio.png",
+    image: String(PortfolioImg),
     subtitle: "Web Development",
     title: "My Web Portfolio",
     href: "https://github.com/ReyVega/Web-Portfolio",
   },
   {
     filter: "app",
-    image: "./src/assets/invaders.png",
+    image: String(Invaders),
     subtitle: "Videogame Development",
     title: "Space Invaders GO",
     href: "https://github.com/ReyVega/Space-Invaders-GO",
   },
   {
     filter: "personal",
-    image: "./src/assets/competitive.png",
+    image: String(Competitive),
     subtitle: "Training problems",
     title: "Competitive Programming",
     href: "https://github.com/ReyVega/Competitive-Programming",
   },
   {
     filter: "app",
-    image: "./src/assets/xvoid.png",
+    image: String(XVoid),
     subtitle: "Videogame Development",
     title: "X-VOID",
     href: "https://github.com/ReyVega/X-VOID",
   },
   {
     filter: "app",
-    image: "./src/assets/rythm.png",
+    image: String(Rythm),
     subtitle: "Mobile App Development",
     title: "Rythm",
     href: "https://github.com/ReyVega/Rythm",
   },
   {
     filter: "web",
-    image: "./src/assets/backend.png",
+    image: String(Backend),
     subtitle: "Web Development",
     title: "Firebase Backend Testing",
     href: "https://github.com/ReyVega/Firebase-Backend-Testing",
   },
   {
     filter: "web",
-    image: "./src/assets/laika.png",
+    image: String(Laika),
     subtitle: "Web Development",
     title: "Laika Web App",
     href: "https://github.com/FundacionLaika/Laika_WebPage",
   },
   {
     filter: "web",
-    image: "./src/assets/minecraft.png",
+    image: String(Minecraft),
     subtitle: "Web development",
     title: "Minecraft World",
     href: "https://github.com/ReyVega/minecraft-world",
