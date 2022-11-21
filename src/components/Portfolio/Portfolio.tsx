@@ -78,6 +78,7 @@ function Portfolio(props: IPortfolio) {
                     image={item.image}
                     subtitle={item.subtitle}
                     title={item.title}
+                    description={item.description}
                     href={item.href}
                   />
                 );
