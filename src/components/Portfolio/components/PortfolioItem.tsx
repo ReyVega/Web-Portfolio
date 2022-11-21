@@ -33,7 +33,7 @@ function PortfolioItem(props: IPortfolioItem) {
         <a href="#close" title="Close" className="body__close"></a>
         <div className="modal__box">
           <img src={props.image} alt="" className="modal__img" />
-          <div className="modal__data">
+          <div className="modal__content">
             <h2 className="modal__title">{props.title}</h2>
             <span className="modal__subtitle">{props.subtitle}</span>
 

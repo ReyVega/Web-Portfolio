@@ -749,8 +749,8 @@ textarea {
   right: 0;
   bottom: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  height: 100vh;
+  width: 100vw;
   background: rgba(0, 0, 0, 0.8);
   z-index: 999;
   opacity: 0;
@@ -820,7 +820,7 @@ textarea {
   transform: scale(1.04);
 }
 
-.modal__data {
+.modal__content {
   padding: 1.5rem;
 }
 
