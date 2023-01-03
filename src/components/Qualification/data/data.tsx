@@ -12,7 +12,7 @@ export const experienceItems: Item[] = [
     subtitle: "Toshiba GCS - Jalisco",
     iconSubtitle: "bx bx-briefcase-alt",
     iconDate: "bx bx-calendar-alt",
-    date: "Aug 2022 - Dec 2022",
+    date: "Aug 2022 - Jan 2022",
   },
   {
     title: "ITESM - Software Engineer",
@@ -29,7 +29,7 @@ export const educationItems: Item[] = [
     subtitle: "ITESM - Jalisco",
     iconSubtitle: "bx bx-book-alt",
     iconDate: "bx bx-calendar-alt",
-    date: "Aug 2018 - Aug 2022",
+    date: "Aug 2018 - Dec 2022",
   },
   {
     title: "High School - HS",
