@@ -8,7 +8,7 @@ export interface Item {
 
 export const experienceItems: Item[] = [
   {
-    title: "NXP Semiconductors - DevOps",
+    title: "NXP Semiconductors - DevOps Engineer",
     subtitle: "NXP - Jalisco",
     iconSubtitle: "bx bx-briefcase-alt",
     iconDate: "bx bx-calendar-alt",
