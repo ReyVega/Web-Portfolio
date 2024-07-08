@@ -7,12 +7,19 @@ export interface Item {
 }
 
 export const experienceItems: Item[] = [
+   {
+    title: "Oracle - Application Developer II",
+    subtitle: "Oracle - Jalisco",
+    iconSubtitle: "bx bx-briefcase-alt",
+    iconDate: "bx bx-calendar-alt",
+    date: "June 2024 - Present",
+  },
   {
     title: "NXP Semiconductors - DevOps Engineer",
     subtitle: "NXP - Jalisco",
     iconSubtitle: "bx bx-briefcase-alt",
     iconDate: "bx bx-calendar-alt",
-    date: "Jan 2023 - Present",
+    date: "Jan 2023 - June 2024",
   },
   {
     title: "Toshiba Intern - Software Engineer",
