@@ -8,7 +8,7 @@ export interface Item {
 
 export const experienceItems: Item[] = [
    {
-    title: "Oracle - Application Developer II",
+    title: "Oracle - Applications Developer II",
     subtitle: "Oracle - Jalisco",
     iconSubtitle: "bx bx-briefcase-alt",
     iconDate: "bx bx-calendar-alt",
